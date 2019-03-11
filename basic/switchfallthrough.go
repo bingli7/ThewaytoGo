@@ -1,21 +1,37 @@
+// fallthrough 只执行下一个case分支
+
 package main
 
 import "fmt"
 
 func main()  {
-	a := 85
-	switch {
-	case a >= 80:
-		fmt.Println("Great!")
+
+	k := 6
+
+	switch k {
+	case 4:
+		fmt.Println("was <= 4")
 		fallthrough
-	case a >= 60 && a <80:
-		fmt.Println("Just fine~")
+	case 5:
+		fmt.Println("was <= 5")
+		fallthrough
+	case 6:
+		fmt.Println("was <= 6")
+		fallthrough
+	case 7:
+		fmt.Println("was <= 7")
+		fallthrough
+	case 8:
+		fmt.Println("was <= 8")
+		fallthrough
 	default:
-		fmt.Println("Default!")
+		fmt.Println("default case")
 	}
 }
 
 /*
-Great!
-Just fine~
+was <= 6
+was <= 7
+was <= 8
+default case
 */
