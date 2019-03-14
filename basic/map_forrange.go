@@ -11,6 +11,7 @@ func main()  {
 
 	// 打印key
 	fmt.Printf("只打印key：\n")
+	// 只从range接收一个值
 	for key := range myMap {
 		fmt.Println(key)
 	}
